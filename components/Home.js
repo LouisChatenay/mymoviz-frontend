@@ -11,7 +11,7 @@ function Home() {
   const [moviesFromAPI, setMoviesFromAPI] = useState([]);
 
   useEffect(() => {
-    fetch('mymoviz-backend-three-gamma.vercel.app/movies')
+    fetch('/movies')
     .then(response => response.json())
     .then(data => {
       setMoviesFromAPI(data.movies)
